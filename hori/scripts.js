@@ -11,7 +11,7 @@ document.querySelector('.toc-title').addEventListener('click', function() {
   }
 });
 
-// Ajuste de desplazamiento para que la barra sticky no tape los títulos
+// Ajuste de desplazamiento para barra sticky (70px)
 document.addEventListener('click', function(e) {
   const link = e.target.closest('a[href^="#"]');
   if (!link) return;
@@ -19,12 +19,9 @@ document.addEventListener('click', function(e) {
   const target = document.getElementById(targetId);
   if (target) {
     e.preventDefault();
-    const headerHeight = 300; // altura de la barra sticky en píxeles
+    const headerHeight = 70; // altura exacta de tu barra sticky
     const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-    window.scrollTo({
-      top: targetPosition,
-      behavior: 'smooth'
-    });
+    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
   }
 });
 
