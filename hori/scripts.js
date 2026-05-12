@@ -19,7 +19,7 @@ document.addEventListener('click', function(e) {
   const target = document.getElementById(targetId);
   if (target) {
     e.preventDefault();
-    const headerHeight = 80; // altura de la barra sticky en píxeles
+    const headerHeight = 100; // altura de la barra sticky en píxeles
     const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
     window.scrollTo({
       top: targetPosition,
