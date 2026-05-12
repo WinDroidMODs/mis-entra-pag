@@ -1,0 +1,51 @@
+:root {
+  --accent: #388E3C;
+  --accent-dark: #2E7D32;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.03)}
+  100%{transform:scale(1)}
+}
+
+.download-btn,.download-button{
+  animation:pulse 2s ease-in-out infinite;
+  transition:all 0.3s ease;
+  background:linear-gradient(135deg, var(--accent), var(--accent-dark));
+  border:none;
+  color:#fff!important;
+  font-weight:700;
+  letter-spacing:0.5px;
+}
+.download-btn:hover,.download-button:hover{
+  animation-play-state:paused;
+  transform:scale(1.05);
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  background:linear-gradient(135deg, var(--accent-dark), var(--accent));
+}
+
+.star-rating{display:inline-flex;align-items:center;margin-left:8px}
+.star{
+  display:inline-block;
+  width:14px;height:14px;
+  margin-right:2px;
+  background:radial-gradient(circle at 30% 30%,#fff8c5 0%,#ffd700 40%,#ffa500 100%);
+  clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+  box-shadow:0 0 2px rgba(255,215,0,0.5);
+}
+.star.empty{background:#e0e0e0;box-shadow:none}
+
+@media (min-width:768px){
+  .botones-comunidad{gap:30px!important}
+  .btn-telegram,.btn-youtube{min-width:250px!important;padding:12px 20px!important}
+}
+@media (max-width:480px){
+  .btn-telegram,.btn-youtube{min-width:160px!important;font-size:13px!important;padding:8px 12px!important}
+  .espacio-movil{margin-bottom:25px!important}
+}
+@media (min-width:768px){
+  .espacio-movil{margin-bottom:35px!important}
+}
+
+#espiral-progreso{transition:stroke-dashoffset 0.1s linear}
