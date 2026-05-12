@@ -70,5 +70,5 @@ body:not(.home) .resumen-inicio{display:none!important}
 #screenshots,
 #instalacion,
 #faq {
-  scroll-margin-top: 50px;
+  scroll-margin-top: 10px;
 }
