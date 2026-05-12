@@ -65,10 +65,3 @@ body:not(.home) .resumen-inicio{display:none!important}
   box-shadow:0 10px 25px rgba(0,0,0,0.3);
   background:linear-gradient(135deg, var(--accent-dark), var(--accent));
 }
-#descripcion,
-#caracteristicas,
-#screenshots,
-#instalacion,
-#faq {
-  scroll-margin-top: 500px;
-}
