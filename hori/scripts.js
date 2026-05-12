@@ -11,20 +11,6 @@ document.querySelector('.toc-title').addEventListener('click', function() {
   }
 });
 
-// Ajuste de desplazamiento para barra sticky (70px)
-document.addEventListener('click', function(e) {
-  const link = e.target.closest('a[href^="#"]');
-  if (!link) return;
-  const targetId = link.getAttribute('href').substring(1);
-  const target = document.getElementById(targetId);
-  if (target) {
-    e.preventDefault();
-    const headerHeight = 70; // altura exacta de tu barra sticky
-    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-  }
-});
-
 // Lightbox para capturas
 document.addEventListener('click', function(e) {
   if (e.target.closest('.screenshot-thumbnail')) {
