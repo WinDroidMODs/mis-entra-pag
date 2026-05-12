@@ -11,6 +11,23 @@ document.querySelector('.toc-title').addEventListener('click', function() {
   }
 });
 
+// Ajuste de desplazamiento para que la barra sticky no tape los títulos
+document.addEventListener('click', function(e) {
+  const link = e.target.closest('a[href^="#"]');
+  if (!link) return;
+  const targetId = link.getAttribute('href').substring(1);
+  const target = document.getElementById(targetId);
+  if (target) {
+    e.preventDefault();
+    const headerHeight = 80; // altura de la barra sticky en píxeles
+    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
+  }
+});
+
 // Lightbox para capturas
 document.addEventListener('click', function(e) {
   if (e.target.closest('.screenshot-thumbnail')) {
