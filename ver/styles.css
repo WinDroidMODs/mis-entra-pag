@@ -65,3 +65,6 @@ body:not(.home) .resumen-inicio{display:none!important}
   box-shadow:0 10px 25px rgba(0,0,0,0.3);
   background:linear-gradient(135deg, var(--accent-dark), var(--accent));
 }
+.app-logo {
+  border-radius: 24px !important;
+}
